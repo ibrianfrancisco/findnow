@@ -13,17 +13,21 @@ nav {
 body .fixed-nav {
   position: fixed;
 }
-
 body.show-nav nav {
   opacity: 1;
   background: #000;
+}
+body.show-nav #main a {
+  color: #fff;
+  font-size: 28px;
+  letter-spacing: 3px;
+  border-radius: 0;
 }
 
 .navbar {
   background: #000;
   border-radius: 0;
 }
-
 .navbar a {
   color: #fff;
   text-decoration: none;
@@ -46,9 +50,3 @@ body.show-nav nav {
   user-select: none;
 }
 
-body.show-nav #main a {
-  color: #fff;
-  font-size: 28px;
-  letter-spacing: 3px;
-  border-radius: 0;
-}

@@ -21,6 +21,11 @@
       controller: 'ReportController as vm'
     })
 
+    .state('categories', {
+      url: '/categories',
+      templateUrl: 'templates/categories.html'
+    })
+
   $urlRouterProvider.otherwise('/welcome');
   }
 
