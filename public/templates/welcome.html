@@ -1,13 +1,28 @@
+<nav id="main" class="fixed-nav">
+  <a href="#">Find Now</a>
+</nav>
 <header>
-  <div class="container">
-    <h1 class="text-center">Lost Your Items? <br />No Problem.</h1>
-    <p class="text-center">FindNow uses a reliable, easy-to-use posting forum
-    for you to quickly find your lost items without all the
-    frustration and lost time.</p>
-  </div>
+  <h1>Lost Your Items?</h1>
+  <h2>No Problem.</h2>
+  <p>FindNow uses a reliable, easy-to-use posting forum
+  for you to quickly <br>find your lost items without all the
+  frustration and lost time.</p>
+  <p>See More Below</p>
 </header>
-
 <div id="welcome-container">
   <button class="item-box">Find My Lost Items</button>
-  <button class="item-box">Report Missing Items</button>
+  <button ui-sref="reportform" class="item-box">Report Missing Items</button>
 </div>
+
+<script>
+  const nav = document.querySelector('#main');
+  let topOfNav = nav.offsetTop;
+  function fixNav() {
+    if(!window.scrollY == topOfNav) {
+      document.body.classList.add('show-nav');
+    } else {
+      document.body.classList.remove('show-nav');
+    }
+  }
+  window.addEventListener('scroll', fixNav);
+</script>

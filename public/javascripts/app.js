@@ -12,8 +12,13 @@
 
     .state('welcome', {
       url: '/welcome',
-      templateUrl: 'templates/welcome.html',
-      controller: 'NavController as ctrl'
+      templateUrl: 'templates/welcome.html'
+    })
+
+    .state('reportform', {
+      url: '/form',
+      templateUrl: 'templates/reportform.html',
+      controller: 'ReportController as vm'
     })
 
   $urlRouterProvider.otherwise('/welcome');
