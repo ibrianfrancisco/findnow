@@ -12,9 +12,10 @@
 
     vm.test = 'hello';
 
-    vm.createPost = function(subject, description, name, phone, email) {
+    vm.createPost = function(subject, category, description, name, phone, email) {
       PostService.save({
         subject,
+        category,
         description,
         name,
         phone,

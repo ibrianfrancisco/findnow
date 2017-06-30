@@ -5,8 +5,15 @@ const postSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  description: String,
-  name: String,
+  category: String,
+  description: {
+    type: String,
+    required: true
+  },
+  name: {
+    type: String,
+    required: true
+  },
   phone: String,
   email: {
     type: String,
