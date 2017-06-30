@@ -21,6 +21,11 @@
       controller: 'ReportController as vm'
     })
 
+    .state('thankyou', {
+      url: '/thankyou',
+      templateUrl: 'templates/thankyou.html'
+    })
+
     .state('categories', {
       url: '/categories',
       templateUrl: 'templates/categories.html'

@@ -20,9 +20,9 @@
 }
 
 a.box {
-  width: 33.33%;
+  width: calc(50% - 30px);
   height: 300px;
-  margin: 20px;
+  margin: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,4 +50,14 @@ a.box {
   padding: 15px 0;
   color: white;
   background: rgba(100,100,100,0.7);
+  font-weight: 400;
+}
+
+@media all and (max-width: 700px) {
+  .cover {
+    flex-direction: column;
+  }
+  a.box {
+    width: 90vw;
+  }
 }

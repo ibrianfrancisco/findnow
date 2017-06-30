@@ -2,6 +2,7 @@
 @import url("reportform.css");
 @import url("nav.css");
 @import url("categories.css");
+@import url("thankyou.css");
 
 /* Box-sizing border-box */
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
