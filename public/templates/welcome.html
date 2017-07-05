@@ -4,7 +4,7 @@
 <header class="welcome-bg">
   <h1>Lost Your Items? No Problem.</h1>
   <p>FindNow uses a reliable, easy-to-use posting forum
-  for you to quickly <br>find your lost items without all the
+  for you to <br>quickly find your lost items without all the
   frustration and lost time.</p>
   <p>See More Below</p>
 </header>
@@ -14,8 +14,8 @@
 </div>
 
 <script>
-  const nav = document.querySelector('#main');
-  let topOfNav = nav.offsetTop;
+  nav = document.querySelector('#main');
+  topOfNav = nav.offsetTop;
   function fixNav() {
     if(!window.scrollY == topOfNav) {
       document.body.classList.add('show-nav');

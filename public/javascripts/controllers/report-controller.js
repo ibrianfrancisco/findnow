@@ -10,8 +10,6 @@
   function ReportController($state, PostService) {
     let vm = this;
 
-    vm.test = 'hello';
-
     vm.createPost = function(subject, category, description, name, phone, email) {
       PostService.save({
         subject,

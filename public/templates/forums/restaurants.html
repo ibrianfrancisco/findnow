@@ -1,0 +1,21 @@
+<nav class="navbar" style="margin: 0">
+  <a href="#">Find Now</a>
+</nav>
+
+<header class="banner" style="background: url(/images/restaurantfront.jpg); background-size: cover;">
+  <h1>Restaurants</h1>
+  <input type="text" ng-model="search" placeholder="Search..." size="30">
+</header>
+
+<div class="breadcrumbs">
+  <a ui-sref="welcome">Home</a> /
+  <a ui-sref="categories">Categories</a>
+</div>
+
+<div class="posts-cover">
+  <div class="post" ng-repeat="post in posts | filter: 'restaurants' | filter: search | orderBy:'date' track by $index">
+    <h4>Subject: {{post.subject}}</h4>
+    <h4>Contact: {{post.name}}, {{post.phone}}</h4>
+    <button class="btn btn-sm btn-info" ng-click="vm.getPost(post._id)">Learn More</button>
+  </div>
+</div>

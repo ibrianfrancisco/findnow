@@ -7,7 +7,17 @@
   PostService.$inject = ['$resource'];
 
   function PostService($resource) {
-    return $resource('/api/posts/');
+    return $resource(
+      '/api/posts/:id',
+      {id: '@_id'},
+      {
+        getpost: {
+          method: 'GET',
+          url: '/api/posts/:postId',
+          params: {postId: '@postId'}
+        }
+      }
+      );
   }
 
 })();

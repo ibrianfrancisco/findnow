@@ -31,6 +31,36 @@
       templateUrl: 'templates/categories.html'
     })
 
+    .state('events', {
+      url: '/events',
+      templateUrl: 'templates/forums/events.html',
+      controller: 'ForumController as vm'
+    })
+
+    .state('restaurants', {
+      url: '/restaurants',
+      templateUrl: 'templates/forums/restaurants.html',
+      controller: 'ForumController as vm'
+    })
+
+    .state('businesses', {
+      url: '/businesses',
+      templateUrl: 'templates/forums/businesses.html',
+      controller: 'ForumController as vm'
+    })
+
+    .state('publicareas', {
+      url: '/publicareas',
+      templateUrl: 'templates/forums/publicareas.html',
+      controller: 'ForumController as vm'
+    })
+
+    .state('post', {
+      url: '/post/:id',
+      templateUrl: 'templates/post.html',
+      controller: 'PostController as vm'
+    })
+
   $urlRouterProvider.otherwise('/welcome');
   }
 

@@ -49,4 +49,10 @@
     min-height: 20vh;
     width: 90vw;
   }
+  .welcome-bg > h1 {
+    font-size: 7.6vw;
+  }
+  .welcome-bg > p {
+    font-size: 3.5vw;
+  }
 }

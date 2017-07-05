@@ -1,18 +1,19 @@
-.categories-banner {
+.banner {
   width: 100vw;
   height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #555;
+  flex-direction: column;
 }
-.categories-banner h1 {
+.banner h1 {
   color: #fff;
   font-size: 4em;
   font-weight: 300;
 }
 
-.cover {
+.category-cover {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -54,7 +55,7 @@ a.box {
 }
 
 @media all and (max-width: 700px) {
-  .cover {
+  .category-cover {
     flex-direction: column;
   }
   a.box {

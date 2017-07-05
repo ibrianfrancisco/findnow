@@ -1,0 +1,23 @@
+<nav class="navbar" style="margin: 0">
+  <a href="#">Find Now</a>
+</nav>
+
+<div class="breadcrumbs">
+  <a ui-sref="welcome">Home</a> /
+  <a ui-sref="categories">Categories</a> /
+  <a onClick="goBack()">{{vm.post.category}}</a>
+</div>
+
+<h1>Description:</h1>
+<p>{{vm.post.description}}</p>
+
+<h1>Contact Info:</h1>
+{{vm.post.name}}
+{{vm.post.phone}}
+{{vm.post.email}}
+
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
