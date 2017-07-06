@@ -1,0 +1,1 @@
+!function(){"use strict";function t(t){return t("/api/posts/:id",{id:"@_id"},{getpost:{method:"GET",url:"/api/posts/:postId",params:{postId:"@postId"}}})}angular.module("app").factory("PostService",t),t.$inject=["$resource"]}();

@@ -1,7 +1,8 @@
 (function () {
 'use strict';
 
-  angular.module('app')
+  angular
+    .module('app')
     .factory('PostService', PostService);
 
   PostService.$inject = ['$resource'];
@@ -17,7 +18,7 @@
           params: {postId: '@postId'}
         }
       }
-      );
+    );
   }
 
 })();

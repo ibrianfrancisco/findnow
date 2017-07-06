@@ -5,8 +5,7 @@
     .module('app')
     .controller('ForumController', ForumController);
 
-  ForumController.$inject = ['$state', 'PostService', '$scope',];
-
+  ForumController.$inject = ['$state', 'PostService', '$scope'];
 
   function ForumController($state, PostService, $scope) {
     let vm = this;
@@ -20,7 +19,6 @@
         $state.go('post', {id: post._id});
       });
     }
-
   }
 
 })();
