@@ -21,6 +21,10 @@ const postSchema = new mongoose.Schema({
   email: {
     type: String,
     required: true
+  },
+  img: {
+    data: Buffer,
+    contentType: String
   }
 });
 

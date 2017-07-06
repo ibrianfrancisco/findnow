@@ -2,22 +2,31 @@
   <a href="#">Find Now</a>
 </nav>
 
+<header class="banner">
+  <h1>{{vm.post.category}}</h1>
+</header>
+
 <div class="breadcrumbs">
   <a ui-sref="welcome">Home</a> /
   <a ui-sref="categories">Categories</a> /
   <a onClick="goBack()">{{vm.post.category}}</a>
 </div>
 
-<h1>Description:</h1>
-<p>{{vm.post.description}}</p>
+<div class="post-details">
+  <h1>Subject:</h1>
+  <p>{{vm.post.subject}}</p>
 
-<h1>Contact Info:</h1>
-{{vm.post.name}}
-{{vm.post.phone}}
-{{vm.post.email}}
+  <h1>Description:</h1>
+  <p>{{vm.post.description}}</p>
+
+  <h1>Contact Info:</h1>
+  <p>{{vm.post.name}}</p>
+  <p>{{vm.post.phone}}</p>
+  <p>{{vm.post.email}}</p>
+</div>
 
 <script>
 function goBack() {
-    window.history.back();
+  window.history.back();
 }
 </script>
