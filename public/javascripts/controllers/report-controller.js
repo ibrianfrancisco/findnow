@@ -20,7 +20,6 @@
         email
       }, data => $state.go('thankyou'));
     }
-
   }
 
 })();

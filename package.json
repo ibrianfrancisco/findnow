@@ -1,5 +1,5 @@
 {
-  "name": "festival-planner",
+  "name": "findnow",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -15,5 +15,13 @@
     "mongoose": "^4.8.4",
     "morgan": "~1.7.0",
     "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-clean-css": "^3.5.0",
+    "gulp-uglify": "^3.0.0",
+    "vinyl-buffer": "^1.0.0",
+    "gulp-autoprefixer": "^2.3.1"
   }
 }
