@@ -1,7 +1,7 @@
 (function() {
 'use strict';
 
-  angular.module('app', ['ui.router', 'ngAnimate', 'ngResource'])
+  angular.module('app', ['ui.router', 'ngResource'])
     .config(configRoutes);
 
   configRoutes.$inject = ['$stateProvider', '$urlRouterProvider', '$httpProvider'];
