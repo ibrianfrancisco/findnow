@@ -28,6 +28,10 @@ p.welcome-text {
   height: 100%;
 }
 
+button.item-box {
+  min-height: 230px;
+}
+
 .item-box {
   width: 50vw;
   height: 40vh;
@@ -38,7 +42,7 @@ p.welcome-text {
   margin: 25px;
 }
 
-@media all and (max-width: 640px) {
+@media all and (max-width: 650px) {
   #welcome-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -48,11 +52,12 @@ p.welcome-text {
   .item-box {
     min-height: 20vh;
     width: 90vw;
+    font-size: 8.5vw;
   }
   .welcome-bg div h1 {
-    font-size: 7.2vw;
+    font-size: 7.5vw;
   }
   p.welcome-text {
-    font-size: 3.3vw;
+    font-size: 3.4vw;
   }
 }
