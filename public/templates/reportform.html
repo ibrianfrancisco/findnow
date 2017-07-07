@@ -4,7 +4,7 @@
 
 <div class="container">
   <form>
-    <label for="subject">Subject:</label><input ng-model="vm.subject" type="text" class="form-control" required>
+    <h4>Information:</h4>
     <label for="categories">Category:</label>
     <select ng-model="vm.category" name="category">
       <option value="Events">Events</option>
@@ -13,12 +13,13 @@
       <option value="Public Areas">Public Areas</option>
     </select>
     <br>
+    <label for="subject">Subject:</label><input ng-model="vm.subject" type="text" class="form-control" required>
     <label for="description">Description:</label><textarea ng-model="vm.description" class="form-control" cols="10" rows="5" required></textarea>
-    <h4>Contact Info</h4>
+    <h4>Contact Info:</h4>
     <label for="name">Name:</label><input ng-model="vm.name" type="text" class="form-control">
     <label for="phone">Phone:</label><input ng-model="vm.phone" type="text" class="form-control">
     <label for="email">Email:</label><input ng-model="vm.email" type="email" class="form-control">
-    <label for="photo">Photo:</label><input type="file" name="filefield">
+    <!-- <label for="photo">Photo:</label><input type="file" name="filefield"> -->
 
     <button ng-click="vm.createPost(vm.subject, vm.category, vm.description, vm.name, vm.phone, vm.email)" class="btn btn-lg btn-success" type="submit" name="action">Submit</button>
   </form>
