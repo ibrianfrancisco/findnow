@@ -9,9 +9,9 @@
     for you to <br>quickly find your lost items without all the
     frustration and lost time.</p>
   </div>
-  <p class="welcome-text">See More Below</p>
+  <a onClick="navigation()" data-nav-section="info" class="welcome-text">See More Below</a>
 </header>
-<div id="welcome-container">
+<div id="welcome-container" data-section="info">
   <button ui-sref="categories" class="item-box">Find My Lost Items</button>
   <button ui-sref="reportform" class="item-box">Report Missing Items</button>
 </div>
@@ -20,11 +20,18 @@
   nav = document.querySelector('#main');
   topOfNav = nav.offsetTop;
   function fixNav() {
-    if(!window.scrollY == topOfNav) {
-      document.body.classList.add('show-nav');
-    } else {
-      document.body.classList.remove('show-nav');
-    }
+    (!window.scrollY == topOfNav) ? document.body.classList.add('show-nav') : document.body.classList.remove('show-nav');
   }
+
+  function navigation() {
+  const section = document.querySelector('a[class="welcome-text"]');
+    $('body').on('click', 'a[class="welcome-text"]', (e) => {
+      $('html, body').animate({
+        scrollTop: section.offsetTop
+      }, 1000, 'easeInOutExpo');
+      e.preventDefault();
+    });
+  };
+
   window.addEventListener('scroll', fixNav);
 </script>

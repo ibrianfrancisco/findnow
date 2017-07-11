@@ -18,8 +18,14 @@
 .welcome-bg div h1 {
   font-size: 3.5em;
 }
-p.welcome-text {
+p.welcome-text,
+a.welcome-text {
   font-size: 1.6em;
+  text-decoration: none;
+}
+
+a.welcome-text:hover {
+  color: #fff;
 }
 
 #welcome-container {
@@ -57,7 +63,8 @@ button.item-box {
   .welcome-bg div h1 {
     font-size: 7.5vw;
   }
-  p.welcome-text {
+  p.welcome-text,
+  a.welcome-text {
     font-size: 3.4vw;
   }
 }
