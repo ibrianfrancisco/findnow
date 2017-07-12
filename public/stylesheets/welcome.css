@@ -36,6 +36,9 @@ a.welcome-text:hover {
 
 button.item-box {
   min-height: 230px;
+  font-family: sans-serif;
+  font-weight: 100;
+  letter-spacing: 1px;
 }
 
 .item-box {
@@ -44,7 +47,6 @@ button.item-box {
   font-size: 50px;
   text-align: center;
   padding: 10px;
-  background: #eeeeee;
   margin: 25px;
 }
 

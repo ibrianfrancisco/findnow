@@ -4,7 +4,7 @@
 
 <header class="banner" style="background: url(/images/businesscomputer.jpg); background-size: cover;">
   <h1>Businesses</h1>
-  <input type="text" ng-model="search" placeholder="Search..." size="30">
+  <input type="search" ng-model="search" placeholder="Search..." size="30">
 </header>
 
 <div class="breadcrumbs">
@@ -17,5 +17,6 @@
     <h4>Subject: {{post.subject}}</h4>
     <h4>Contact: {{post.name}}, {{post.phone}}</h4>
     <button class="btn btn-sm btn-info" ng-click="vm.getPost(post._id)">Learn More</button>
+    <hr>
   </div>
 </div>
