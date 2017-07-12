@@ -12,15 +12,14 @@
   <a onClick="navigation()" data-nav-section="info" class="welcome-text">See More Below</a>
 </header>
 <div id="welcome-container" data-section="info">
-  <button ui-sref="categories" class="item-box">Find My Lost Items</button>
-  <button ui-sref="reportform" class="item-box">Report Missing Items</button>
+  <button ui-sref="categories" class="item-box btn-success">Find My Lost Items</button>
+  <button ui-sref="reportform" class="item-box btn-danger">Report Missing Items</button>
 </div>
 
 <script>
   nav = document.querySelector('#main');
-  topOfNav = nav.offsetTop;
   function fixNav() {
-    (!window.scrollY == topOfNav) ? document.body.classList.add('show-nav') : document.body.classList.remove('show-nav');
+    (!window.scrollY == nav.offsetTop) ? document.body.classList.add('show-nav') : document.body.classList.remove('show-nav');
   }
 
   function navigation() {
