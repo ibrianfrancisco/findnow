@@ -16,6 +16,10 @@ nav > * {
   font-weight: 100;
 }
 
+nav a:hover {
+  color: #fff;
+}
+
 body .fixed-nav {
   position: fixed;
 }
