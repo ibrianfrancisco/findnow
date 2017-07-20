@@ -3,10 +3,36 @@
 
   angular.module('app', ['ui.router', 'ngResource'])
     .config(configRoutes);
+    .run(runBlock)
+    .run(loginBlock);
+
+    runBlock.$inject = ['$rootScope', '$state', 'UserService'];
+
+    function runBlock($rootScope, $state, UserService) {
+      $rootScope.$on('$stateChangeStart', function(evt, toState) {
+        if(toState.loginRequired && !UserService.isLoggedIn()) {
+          evt.preventDefault();
+          $state.go('login');
+        }
+      });
+    }
+
+    loginBlock.$inject = ['$rootScope', '$state', 'UserService'];
+
+    function loginBlock($rootScope, $state, UserService) {
+      $rootScope.$on('$stateChangeStart', function(evt, toState) {
+        if(toState.loggedIn && UserService.isLoggedIn()) {
+          evt.preventDefault();
+          $state.go('homepage');
+        }
+      });
+    }
 
   configRoutes.$inject = ['$stateProvider', '$urlRouterProvider', '$httpProvider'];
 
   function configRoutes($stateProvider, $urlRouterProvider, $httpProvider) {
+
+    $httpProvider.interceptors.push('AuthInterceptor');
 
     $stateProvider
 
