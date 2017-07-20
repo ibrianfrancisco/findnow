@@ -1,0 +1,16 @@
+<div class="main-wrapper">
+  <br><br><br>
+  <div class="container text-center">
+    <header class="header-text">Log In</header>
+    <h4 class="header-text">Sign in to continue</h4>
+    <div>
+      <form class="form-signin" ng-submit="userCtrl.login()">
+        <input type="email" class="form-control" placeholder="Username" ng-model="userCtrl.user.email" required>
+        <input type="password" class="form-control" placeholder="Password" ng-model="userCtrl.user.password" required>
+        <br>
+        <button class="btn btn-success" type="submit" name="action">Log In</button>
+      </form>
+      <button class="btn btn-primary btn-md" ui-sref="signup">Create account</button>
+    </div>
+  </div>
+</div>

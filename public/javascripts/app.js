@@ -23,7 +23,7 @@
       $rootScope.$on('$stateChangeStart', function(evt, toState) {
         if(toState.loggedIn && UserService.isLoggedIn()) {
           evt.preventDefault();
-          $state.go('homepage');
+          $state.go('welcome');
         }
       });
     }
@@ -38,13 +38,29 @@
 
     .state('welcome', {
       url: '/welcome',
-      templateUrl: 'templates/welcome.html'
+      templateUrl: 'templates/welcome.html',
+      controller: 'NavController as navCtrl'
+    })
+
+    .state('login', {
+      url: '/login',
+      templateUrl: 'templates/users/login.html',
+      controller: 'UserController as userCtrl',
+      loggedIn: true
+    })
+
+    .state('signup', {
+      url: '/signup',
+      templateUrl: 'templates/users/signup.html',
+      controller: 'UserController as userCtrl',
+      loggedIn: true
     })
 
     .state('reportform', {
       url: '/form',
       templateUrl: 'templates/reportform.html',
-      controller: 'ReportController as vm'
+      controller: 'ReportController as vm',
+      loginRequired: true
     })
 
     .state('thankyou', {

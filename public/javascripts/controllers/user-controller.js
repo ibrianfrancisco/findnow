@@ -11,14 +11,14 @@
 
     vm.signup = function() {
       UserService.signup(vm.user).then(function() {
-        $state.go('homepage');
+        $state.go('welcome');
       });
       vm.user = {};
     }
 
     vm.login = function() {
       UserService.login(vm.user).then(function() {
-        $state.go('homepage');
+        $state.go('welcome');
       }, function() {
         $state.go('login');
       });
