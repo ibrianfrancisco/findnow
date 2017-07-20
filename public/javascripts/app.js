@@ -2,7 +2,7 @@
 'use strict';
 
   angular.module('app', ['ui.router', 'ngResource'])
-    .config(configRoutes);
+    .config(configRoutes)
     .run(runBlock)
     .run(loginBlock);
 

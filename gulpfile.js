@@ -20,6 +20,7 @@ gulp.task('browserify', () => {
   .pipe(gulp.dest('public/dist/js'));
 });
 
-gulp.task('default', ['browserify', 'minify-css']);
+// gulp.task('default', ['browserify', 'minify-css']);
+gulp.task('default', ['minify-css']);
 
 gulp.watch(['public/javascripts/**/*.js', 'public/stylesheets/*.css'], ['default']);
