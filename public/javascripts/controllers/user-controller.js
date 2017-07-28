@@ -1,8 +1,9 @@
 (function() {
 'use strict';
 
-  angular.module('app')
-  .controller('UserController', UserController);
+  angular
+    .module('app')
+    .controller('UserController', UserController);
 
   UserController.$inject = ['$state', 'UserService'];
 

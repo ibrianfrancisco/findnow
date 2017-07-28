@@ -1,8 +1,9 @@
 (function() {
 'use strict';
 
-  angular.module('app')
-  .controller('NavController', NavController);
+  angular
+    .module('app')
+    .controller('NavController', NavController);
 
   NavController.$inject = ['$state', 'UserService'];
 
