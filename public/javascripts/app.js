@@ -41,7 +41,6 @@
       templateUrl: 'templates/welcome.html'
     })
 
-
     .state('login', {
       url: '/login',
       templateUrl: 'templates/users/login.html',
@@ -56,11 +55,11 @@
       loggedIn: true
     })
 
-    // .state('profile', {
-    //   url: '/profile',
-    //   templateUrl: 'templates/users/profile.html',
-    //   loginRequired: true
-    // })
+    .state('profile', {
+      url: '/profile',
+      templateUrl: 'templates/users/profile.html',
+      loginRequired: true
+    })
 
     .state('reportform', {
       url: '/form',

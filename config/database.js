@@ -4,7 +4,9 @@ mongoose.Promise = Promise;
 
 var db = mongoose.connection;
 
-mongoose.connect(process.env.DATABASE_URL);
+mongoose.connect(process.env.DATABASE_URL, {
+  useMongoClient: true,
+});
 
 // database connection event
 db.once('open', function () {

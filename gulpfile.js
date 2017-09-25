@@ -2,7 +2,6 @@ const gulp = require('gulp'),
       sass = require('gulp-sass'),
       uglify = require('gulp-uglify'),
       browserify = require('browserify'),
-      buffer = require('vinyl-buffer'),
       cleanCSS = require('gulp-clean-css'),
       autoprefixer = require('gulp-autoprefixer');
 
@@ -21,7 +20,6 @@ gulp.task('browserify', () => {
                    'public/javascripts/controllers/nav-controller.js',
                    'public/javascripts/controllers/post-controller.js',
                    'public/javascripts/controllers/user-controller.js'])
-  .pipe(buffer())
   .pipe(uglify())
   .pipe(gulp.dest('public/dist/js'));
 });
